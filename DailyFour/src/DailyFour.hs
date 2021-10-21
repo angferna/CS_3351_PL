@@ -41,15 +41,15 @@ module DailyFour where
     mergeSorted3 [](y:ys)[] = (y:ys)
     mergeSorted3 [][](z:zs) = (z:zs)
 
-    mergeSorted3 (x:xs)(y:ys)[] = if(x>y)
+    mergeSorted3 (x:xs)(y:ys)[] = if(x<y)
                                     then (x:(mergeSorted3 xs (y:ys) []))
                                     else (y:(mergeSorted3 (x:xs) ys []))
 
-    mergeSorted3 (x:xs)[](z:zs) = if(x>z)
+    mergeSorted3 (x:xs)[](z:zs) = if(x<z)
                                     then (x:(mergeSorted3 xs [] (z:zs)))
                                     else (z:(mergeSorted3 (x:xs) [] zs))
 
-    mergeSorted3 [](y:ys)(z:zs) = if(y>z)
+    mergeSorted3 [](y:ys)(z:zs) = if(y<z)
                                     then (y:(mergeSorted3 [] ys (z:zs)))
                                     else (z:(mergeSorted3 [] (y:ys) zs))
 

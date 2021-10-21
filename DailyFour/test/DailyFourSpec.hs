@@ -28,7 +28,7 @@ module DailyFourSpec where
          (mergeSorted3 [2, 3, 5] [1, 8] [-1, 0, 4, 10]) `shouldBe` [-1, 0, 1, 2, 3, 4, 5, 8, 10]
 
         it "produce mergeSorted3 of [2, 3, 5] [1, 8] []" $
-         (mergeSorted3 [2, 3, 5] [1, 8] []) `shouldBe` [2,3,5,1,8]
+         (mergeSorted3 [2, 3, 5] [1, 8] []) `shouldBe` [1,2,3,5,8]
 
         it "produce mergeSorted3 of [] [1, 8] []" $
          (mergeSorted3 [] [1, 8] []) `shouldBe` [1, 8]
