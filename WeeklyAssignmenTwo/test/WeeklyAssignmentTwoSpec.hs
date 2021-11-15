@@ -1,7 +1,7 @@
 module WeeklyAssignmentTwoSpec where
     
     import Test.Hspec
-    import WeeklyAssignmentThree
+    import WeeklyAssignmentTwo
 
     main::IO()
     main = hspec $ do
@@ -37,13 +37,13 @@ module WeeklyAssignmentTwoSpec where
          (identical (NodeOne 5 Empty Empty Empty) (NodeOne 5 Empty Empty Empty)) `shouldBe` True
 
     describe "treeMap" $ do
-        it "produce treeMap of treeMap (\x->x+5) Empty" $
+        it "produce treeMap of treeMap (\\x->x+5) Empty" $
          (treeMap (\x->x+5) Empty) `shouldBe` Empty
 
-        it "produce treeMap of treeMap (\x->x+5) (NodeOne 5 Empty Empty Empty))" $
+        it "produce treeMap of treeMap (\\x->x+5) (NodeOne 5 Empty Empty Empty))" $
          (treeMap (\x->x+5) (NodeOne 5 Empty Empty Empty)) `shouldBe` NodeOne 10 Empty Empty Empty
 
-        it "produce treeMap of treeMap (\x->x+5) (NodeTwo 4 7 Empty (NodeOne 5 Empty Empty Empty) Empty)" $
+        it "produce treeMap of treeMap (\\x->x+5) (NodeTwo 4 7 Empty (NodeOne 5 Empty Empty Empty) Empty)" $
          (treeMap (\x->x+5) (NodeTwo 4 7 Empty (NodeOne 5 Empty Empty Empty) Empty)) `shouldBe` NodeTwo 9 12 Empty (NodeOne 10 Empty Empty Empty) Empty
     
     describe "treeFoldPreOrder" $ do
