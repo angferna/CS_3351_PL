@@ -6,7 +6,7 @@ module DailyEightSpec where
     main = hspec $ do
 
     describe "inYear" $ do
-    it "produce inYear of 2001 l" $
+        it "produce inYear of 2001 l" $
          (inYear 2001 l) `shouldBe` [Event {name = "Angel's Birthday", day =2, month = "Nov", year = 2001, xlocation = 100.0, ylocation = 100.0}, Event { name = "Analise's Birthday", day =10, month = "Dec", year = 2001, xlocation = 150.0, ylocation = 150.0}]
 
         it "produce inYear of 1960 l" $
