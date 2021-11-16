@@ -1,4 +1,4 @@
-module DailyEIghtSpec where
+module DailyEightSpec where
     import Test.Hspec
     import DailyEight
 
