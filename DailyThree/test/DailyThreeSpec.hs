@@ -3,8 +3,8 @@ module DailyThreeSpec where
     import Test.Hspec
     import DailyThree
 
-    main :: IO ()
-    main = hspec $ do
+main :: IO ()
+main = hspec $ do
 
     describe "removeAllExcept" $ do
         it "produce removeAllExcept of 'a' ['b', 'a', 'c', 'a']" $
