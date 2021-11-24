@@ -40,10 +40,10 @@ main = hspec $ do
         it "produce charsToAscii of " "" $
          (charsToAscii " ") `shouldBe` []
 
-         it "produce charsToAscii of "hello"" $
+        it "produce charsToAscii of "hello"" $
          (charsToAscii "hello") `shouldBe` [104,101,108,108,111]
 
-         it "produce charsToAscii of "hello goodbye"" $
+        it "produce charsToAscii of "hello goodbye"" $
          (charsToAscii "hello goodbye") `shouldBe` [104,101,108,108,111,32,103,111,111,100,98,121,101]
     
     describe "asciiToChars" $ do
