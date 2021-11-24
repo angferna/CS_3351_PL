@@ -3,8 +3,8 @@ module DailyFourSpec where
     import Test.Hspec
     import DailyFour
 
-    main :: IO ()
-    main = hspec $ do
+main :: IO ()
+main = hspec $ do
 
     describe "zip3Lists" $ do
         it "produce zip3Lists of [1, 2, 3] ['a', 'b', 'c'] [4, 5, 6]" $
