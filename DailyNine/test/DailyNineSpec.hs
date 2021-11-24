@@ -3,14 +3,14 @@ module DailyNineSpec where
     import Test.Hspec
     import DailyNine
 
-    main :: IO ()
-    main = hspec $ do
+main :: IO ()
+main = hspec $ do
 
     describe "minAndMax" $ do
-    it "produce minAndMax of [1,2,3,4,5]" $
+        it "produce minAndMax of [1,2,3,4,5]" $
          (minAndMax [1,2,3,4,5]) `shouldBe` (1,5)
 
-        it "produce minAndMax of [3,7,5,8,5,3,7,5,8,5]" $
+         it "produce minAndMax of [3,7,5,8,5,3,7,5,8,5]" $
          (minAndMax [3,7,5,8,5,3,7,5,8,5]) `shouldBe` (3,8)
 
          it "produce minAndMax of [5]" $
