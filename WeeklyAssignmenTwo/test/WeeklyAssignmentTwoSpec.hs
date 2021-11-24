@@ -3,17 +3,17 @@ module WeeklyAssignmentTwoSpec where
     import Test.Hspec
     import WeeklyAssignmentTwo
 
-    main::IO()
-    main = hspec $ do
+main::IO()
+main = hspec $ do
 
     describe "search" $ do
         it "produce search of search 5 Empty" $
          (search 5 Empty) `shouldBe` False
 
-        it "produce search of search 5 (NodeOne 5 Empty Empty Empty)" $
+         it "produce search of search 5 (NodeOne 5 Empty Empty Empty)" $
          (search 5 (NodeOne 5 Empty Empty Empty)) `shouldBe` True
 
-        it "produce search of search 5 NodeTwo 4 7 Empty (NodeOne 5 Empty Empty Empty) Empty" $
+         it "produce search of search 5 NodeTwo 4 7 Empty (NodeOne 5 Empty Empty Empty) Empty" $
          (search 5 (NodeTwo 4 7 Empty (NodeOne 5 Empty Empty Empty) Empty)) `shouldBe` True 
 
     describe "insert" $ do
